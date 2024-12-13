@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Even Odd calculator</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="number" name="num" placeholder="Enter Number" required/>
+    <br/><br/>
+    <input type="submit" value="Calculate">
+</form>
+<h2>{{msg}}</h2>
+{% endblock %}
